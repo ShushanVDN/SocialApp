@@ -15,7 +15,9 @@ const Profile = (props) => {
     return (
     <div className='app-wrapper-content'>
         <ProfileInfo  />
-        <MyPosts posts={props.state.posts} addPost={props.addPost} />
+        <MyPosts posts={props.profilePage.posts}
+                 newPostText={props.profilePage.newPostText}
+                 dispatch={props.dispatch} />
     </div>
     )
 };
