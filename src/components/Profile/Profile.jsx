@@ -16,8 +16,8 @@ const Profile = (props) => {
     <div className='app-wrapper-content'>
         <ProfileInfo  />
         <MyPosts posts={props.profilePage.posts}
-                 newPostText={props.profilePage.newPostText}
-                 dispatch={props.dispatch} />
+                newPostText={props.profilePage.newPostText}
+                dispatch={props.dispatch} />
     </div>
     )
 };
