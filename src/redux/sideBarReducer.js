@@ -1,6 +1,6 @@
-import reducer from "./profilePage"
+let initialState = {}
 
-const sideBarReducer = (state, action) => {
+const sideBarReducer = (state = initialState, action) => {
 
     return state
 }

@@ -8,9 +8,9 @@ import { Route } from 'react-router-dom'
 import AboutUs from './components/AboutUs/AboutUs';
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props)  => {
-
   return (
        <div className="app-wrapper">
         <Header />
@@ -24,10 +24,9 @@ const App = (props)  => {
           {/* <Route path='/dialogs' render={ () => <Dialogs ialogsData={props.state.dialgPage.dialogsData}
                      messages={props.state.dialogPage.messages} />} />  */}
           <Route path='/dialogs' 
-                render={ () => <Dialogs state={props.state.disalogsPage} store={props.store} />} />
+                render={ () => <DialogsContainer />} />
           <Route path='/profile' 
-                render={ () => <Profile profilePage= {props.state.profilePage}
-                                        dispatch = {props.dispatch} /> } />
+                render={ () => <Profile />} />
 
           {/* <Route path='/profile' render={SomeComponent} />
           <Route path='/profile' component={SomeComponent} /> */}
