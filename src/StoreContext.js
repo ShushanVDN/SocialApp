@@ -8,4 +8,4 @@ const Provider = (props) => {
     </StoreContext.Provider>
 }
 
-export default StoreContext
+
