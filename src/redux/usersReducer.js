@@ -5,15 +5,15 @@ const SET_USERS = 'SET_USERS'
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE'
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT'
 
-let initalState ={
-  users: [
+let initalState = {
+    users: [
     //   {id: 1, photoUrl:"../../images/12.jpg", followed: false, fullName: 'Dmitriy', status: 'I am a developer', location: { city:'Minsk', country:'Belarus'} },
     //   {id: 2, photoUrl:"../../images/12.jpg", followed: false,  fullName: 'Sasha', status: 'I am a teacher', location: { city:'Moscow', country:'Russia'} },
     //   {id: 3, photoUrl:"../../images/12.jpg", followed: true,  fullName: 'Anna', status: 'I am a dremer', location: { city:'Minsk', country:'ARmenia'} }
-  ],
-  pageSize: 5,
-  totalUsersCount: 0,
-  currentPage: 2
+    ],
+    pageSize: 5,
+    totalUsersCount: 0,
+    currentPage: 1
 }
 
 const usersReducer = (state = initalState,action) => {
