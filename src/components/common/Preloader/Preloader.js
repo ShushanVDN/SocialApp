@@ -3,7 +3,7 @@ import preloader from '../../../images/802.gif'
 
 let Preloader = (props) => {
     return <div>
-                 <img src={preloader} />
+                <img src={preloader} />
             </div>
 
 }
