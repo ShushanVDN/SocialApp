@@ -1,11 +1,12 @@
 import React from 'react'
-import MyPostsContainer from './MyPosts/MyPostsContainer'
-import ProfileInfo from './ProfileInfo/ProfileInfo'
+//import MyPostsContainer from './MyPosts/MyPostsContainer'
+//import ProfileInfo from './ProfileInfo/ProfileInfo'
 import Profile from "./Profile";
 import * as axios from "axios";
 import {connect} from 'react-redux'
 import {setUsersProfile} from '../../redux/profileReducer'
-import withRouter from "react-router-dom/es/withRouter";
+import {withRouter} from "react-router-dom";
+
 
 class ProfileContainer extends React.Component {
     componentDidMount() {

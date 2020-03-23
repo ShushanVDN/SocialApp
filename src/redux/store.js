@@ -1,6 +1,6 @@
 import profileReducer from "./profileReducer";
 import sideBarReducer from "./sideBarReducer";
-import dialogsReducer from "./disalogsReducer";
+import dialogsReducer from "./dialogsReducer";
 
 
 
@@ -17,7 +17,7 @@ let store = {
             ],
             newPostText: 'add new post'
         },
-        disalogsPage: {
+        dialogsPage: {
             dialogs: [
                 {id: 1, name: 'Anna'},
                 {id: 2, name: 'Hakob'},
@@ -53,7 +53,7 @@ let store = {
         dispatch(action) {
             this._state.profilePage = profileReducer(this._state.profilePage, action)
             this._state.sideBar = sideBarReducer(this._state.sideBar, action)
-            this._state.disalogsPage = dialogsReducer(this._state.disalogsPage, action)
+            this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
             
             this._callsubscriber(this._state)
         }

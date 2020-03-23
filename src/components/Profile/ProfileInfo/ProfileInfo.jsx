@@ -15,7 +15,7 @@ const ProfileInfo = (props) => {
                 <img src="https://i.pinimg.com/originals/c6/da/03/c6da0308991deed3af22d92065242a08.jpg" alt=""/>
             </div>
             <div className={classes.avaInfo}>
-                <img src={props.profile.photos.large} />
+                <img src={props.profile.photos.large} alt='' />
                 description
             </div>
         </div>

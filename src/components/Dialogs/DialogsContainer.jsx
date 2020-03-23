@@ -1,4 +1,4 @@
-import {sendMessageCreator, updateNewMessageBodyCreator} from '../../redux/disalogsReducer'
+import {sendMessageCreator, updateNewMessageBodyCreator} from '../../redux/dialogsReducer'
 import Dialogs from "./Dialogs";
 import {connect} from 'react-redux'
 //import StoreContext from "../../StoreContext";
@@ -15,14 +15,14 @@ import {connect} from 'react-redux'
 //                 }
 //                 return <Dialogs updateNewMessageBody={onNewMessageChange}
 //                                 sendMessage={onSendMessageClick}
-//                                 dialogsPage={store.disalogsPage} /> }}
+//                                 dialogsPage={store.dialogsPage} /> }}
 //         </StoreContext.Consumer>};
 
 //export default DialogsContainer
 
 let mapStateToProps = (state) => {
     return {
-        disalogsPage: state.disalogsPage
+        dialogsPage: state.dialogsPage
     }
 }
 let  mapDispatchToProps = (dispatch) =>{
