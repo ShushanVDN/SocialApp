@@ -1,11 +1,10 @@
-import {addPostActionCreeator, updateNewTextActionCreator} from "../../../redux/profileReducer";
+import {addPostActionCreator, updateNewTextActionCreator} from "../../../redux/profileReducer";
 import MyPosts from "./MyPosts";
 import {connect} from 'react-redux'
 //import StoreContext from "../../../StoreContext";
 
 
 // const MyPostsContainer = (props) => {
-//
 //     return (
 //         <StoreContext.Consumer>
 //             {store => {
@@ -13,11 +12,9 @@ import {connect} from 'react-redux'
 //                 let addPost = () => {
 //                     store.dispatch(addPostActionCreeator());
 //                 };
-//
 //                 let onPostChange = (text) => {
 //                     let action = updateNewTextActionCreator(text)
 //                     store.dispatch(action)
-//                 }
 //
 //                 return <MyPosts updateNewPostText={onPostChange()}
 //                                 addPost={addPost}
@@ -34,16 +31,16 @@ const mapStateToProps = (state) => {
         newPostText: state.profilePage.newPostText
     }
 }
-const mapDispatchtoProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         updateNewPostText: (text) => {
             let action = updateNewTextActionCreator(text)
             dispatch(action)
         },
-        addPost: () => { dispatch(addPostActionCreeator()) }
+        addPost: () => { dispatch(addPostActionCreator()) }
     }
 }
 
-export const SuperPostsMyContainer = connect(mapStateToProps, mapDispatchtoProps)(MyPosts)
+export const SuperPostsMyContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts)
 
 export default SuperPostsMyContainer

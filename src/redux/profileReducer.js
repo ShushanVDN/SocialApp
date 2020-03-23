@@ -1,7 +1,8 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEX';
+const SET_USERS_PROFILE = 'SET_USERS_PROFILE'
 
-let initalState ={
+let initalState = {
     posts: [
         {id: 1, message: 'How are you', likesCount: 12},
         {id: 2, message: 'What is your name', likesCount: 17},
@@ -18,29 +19,43 @@ let initalState ={
         {id: 5, message: 'Thats great'},
         {id: 6, message: 'yo'}
     ],
+    profile: null
 }
 
-const profileReducer = (state=initalState,action) => {
+const profileReducer = (state = initalState, action) => {
 
-    switch(action.type) {
-        case ADD_POST: let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            likesCount: 0
+    switch (action.type) {
+        case ADD_POST: {
+            let newPost = {
+                id: 5,
+                message: state.newPostText,
+                likesCount: 0
             };
-            state.posts.push(newPost);
-            state.newPostText = '';
-            return state
-        case UPDATE_NEW_POST_TEXT: 
-            state.newPostText = action.newText;
-            return state
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            };
+        }
+        case UPDATE_NEW_POST_TEXT: {
+            return {
+                ...state,
+                newPostText: action.newText
+            }
+        }
+        case SET_USERS_PROFILE: {
+            return {
+                ...state,
+                profile: action.profile
+            }
+        }
         default:
             return state
     }
 }
 
-export const addPostActionCreeator = () => ({type: ADD_POST})
-export const updateNewTextActionCreator = text =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const updateNewTextActionCreator = text => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const setUsersProfile = (profile) => ({type: SET_USERS_PROFILE, profile})
 
 export default profileReducer

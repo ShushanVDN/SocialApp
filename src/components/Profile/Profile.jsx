@@ -6,7 +6,7 @@ const Profile = (props) => {
 
     return (
     <div className='app-wrapper-content'>
-        <ProfileInfo  />
+        <ProfileInfo profile={props.profile} />
         {/*<MyPostsContainer  posts={props.profilePage.posts}*/}
         {/*        newPostText={props.profilePage.newPostText}*/}
         {/*        dispatch={props.dispatch} />*/}
