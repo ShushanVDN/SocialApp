@@ -8,7 +8,7 @@ const Header = (props) => {
             <img alt="logo" src="https://pngimage.net/wp-content/uploads/2018/05/background-logo-png-5.png"/>
         <div className={classes.loginBlock}>
             { props.isAuth ? props.login
-            : <NavLink to={'./login'}> Login</NavLink> }
+            : <NavLink to={'/login'}> Login</NavLink> }
         </div>
         </header>
     )

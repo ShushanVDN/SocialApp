@@ -1,7 +1,10 @@
 .usersPhoto{
     width: 100px;
     height: 100px;
-    border: 1px solid red;
+    padding: 10px 10px 0 10px;
+}
+.userInfo, .userName{
+    padding-left: 30px;
 }
 
 .selectedPage {
